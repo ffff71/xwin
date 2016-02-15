@@ -1,10 +1,8 @@
 /*
-
 	gcc xwin_i.cpp -o xwin_i -lX11
 	gcc xwin_i.cpp -o xwin_i -I /usr/include/X11 -L /usr/X11/lib -lX11
 	gcc xwin_i.cpp -o xwin_i -I /sowhere/else -L /who/knows/where -lX11
 	gcc xwin_i.cpp -o xwin_i -lX11 -lstdc++
-
 */
 
 #include <X11/Xlib.h>
@@ -12,7 +10,6 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <math.h>
- 
 
 #define WIN_WIDTH   640
 #define WIN_HEIGHT  480
@@ -27,7 +24,6 @@ unsigned long GetColor( Display* dis, char* color_name )
     XAllocNamedColor( dis, cmap, color_name, &near_color, &true_color );
     return( near_color.pixel );
 }
-
  
 
 int main( void )
