@@ -5,7 +5,6 @@
 	gcc xwin_i.cpp -o xwin_i -I /sowhere/else -L /who/knows/where -lX11
 	gcc xwin_i.cpp -o xwin_i -lX11 -lstdc++
 
-
 */
 
 #include <X11/Xlib.h>
@@ -56,7 +55,7 @@ int main( void )
  
     gc = XCreateGC( dis, DefaultRootWindow(dis), 0, 0 );
     XSetFunction( dis, gc, GXxor );
-   
+  /* 
     for (int t = 0; t < 100; t++)
     {
            XSetForeground( dis, gc, BlackPixel(dis, 0)^GetColor( dis, "red"));
@@ -65,6 +64,9 @@ int main( void )
         usleep(10000);
            XFillArc( dis, win, gc, t*5+80, t*3+40, 80, 40, 0, 360*64);
     }
+  */
+
+    XSetForeground( dis, gc, BlackPixel(dis, 0)^GetColor( dis, "red"));
 
     unsigned int x=600, y=55, d=0, xd=1, yd=1, it=0;
     while ( 1 )
