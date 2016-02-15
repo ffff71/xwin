@@ -25,7 +25,6 @@ unsigned long GetColor( Display* dis, char* color_name )
     return( near_color.pixel );
 }
  
-
 int main( void )
 {
     Display* dis;
@@ -80,11 +79,10 @@ int main( void )
 
 	//XFlush(display);
 	usleep(200); 
-    }     
-
+    }
     XDestroyWindow( dis , win );
     XCloseDisplay( dis );
 
     return(0);
-
+	
 }
