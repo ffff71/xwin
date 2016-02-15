@@ -62,7 +62,7 @@ int main( void )
     }
   */
 
-    XSetForeground( dis, gc, BlackPixel(dis, 0)^GetColor( dis, "red"));
+    XSetForeground( dis, gc, BlackPixel(dis, 0)^GetColor( dis, "green"));
 
     unsigned int x=600, y=55, d=0, xd=1, yd=1, it=0;
     while ( 1 )
