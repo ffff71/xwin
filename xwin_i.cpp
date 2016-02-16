@@ -5,11 +5,11 @@
 	gcc xwin_i.cpp -o xwin_i -lX11 -lstdc++
 */
 
-#include <X11/Xlib.h>
-#include <X11/Xutil.h>
 #include <stdio.h>
 #include <unistd.h>
 #include <math.h>
+#include <X11/Xlib.h>
+#include <X11/Xutil.h>
 
 #define WIN_WIDTH   640
 #define WIN_HEIGHT  480
